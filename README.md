@@ -30,7 +30,7 @@ visualizar el funcionamiento de la curva ADSR.
   
   Para ello, utilizamos el instrumento InstrumentDumb proporcionado al inicio de la práctica:
   
-  (gràfica doremi.wav)
+  <img src="img/primera.JPG" width="640" align="center">
   
 * Un instrumento *percusivo*, como una guitarra o un piano, en el que el sonido tenga un ataque rápido, no haya
   mantenimiemto y el sonido se apague lentamente.
@@ -40,7 +40,11 @@ visualizar el funcionamiento de la curva ADSR.
   
   > Piano	ADSR_A=0.01; ADSR_D=0.5; ADSR_S=0; ADSR_R=0.5; N=40;
   
-  (grafica doremi_piano.wav)
+  <img src="img/piano.JPG" width="640" align="center">
+  
+  > Piano2	ADSR_A=0.01; ADSR_D=0.5; ADSR_S=0; ADSR_R=0.0001; N=40;
+  
+   <img src="img/piano2.JPG" width="640" align="center">
   
   - Para un instrumento de este tipo, tenemos dos situaciones posibles:
     * El intérprete mantiene la nota *pulsada* hasta su completa extinción.
@@ -56,7 +60,7 @@ visualizar el funcionamiento de la curva ADSR.
   
   > 1	Trompeta	ADSR_A=0.03; ADSR_D=0.4; ADSR_S=0.3; ADSR_R=0.3; N=40;
   
-  (gràfica doremi_trompeta.wav)
+    <img src="img/tromepta.JPG" width="640" align="center">
 
 Para los cuatro casos, deberá incluir una gráfica en la que se visualice claramente la curva ADSR. Deberá añadir la
 información necesaria para su correcta interpretación, aunque esa información puede reducirse a colocar etiquetas y
@@ -181,9 +185,13 @@ Los resultados que esperábamos, sin embargo, es que se vea que los valores que 
   la señal generada (se valorará que la explicación esté contenida en las propias gráficas, sin necesidad de
   *literatura*).
   
-  (gràfica doremi_tromp_trem.wav)
+  **Efecto tremolo
   
-  (gràfica doremi_tromp_vibr.wav)
+  <img src="img/doremi_tromp_trem.JPG" width="500" align="center">
+  
+  **Efecto vibrato
+  
+  <img src="img/doremi_tromp_vibr.JPG" width="500" align="center">
   
 - Si ha generado algún efecto por su cuenta, explique en qué consiste, cómo lo ha implementado y qué resultado ha
   producido. Incluya, en el directorio `work/ejemplos`, los ficheros necesarios para apreciar el efecto, e indique,
@@ -198,6 +206,13 @@ en semitonos.
 
 - Use el instrumento para generar un vibrato de *parámetros razonables* e incluya una gráfica en la que se vea,
   claramente, la correspondencia entre los valores `N1`, `N2` e `I` con la señal obtenida.
+  
+  **Respuesta:
+  I = d/m es el índice de modulación
+  k = N1 +nN2 donde n = 0,1,2... donde k = el nº de armónico y n la frecuencia lateral
+  Unos valores para dichos parámetros para el caso de la trompeta podrían ser I=5 y K=1
+
+  
 - Use el instrumento para generar un sonido tipo clarinete y otro tipo campana. Tome los parámetros del sonido (N1,
   N2 e I) y de la envolvente ADSR del citado artículo. Con estos sonidos, genere sendas escalas diatónicas (fichero
   `doremi.sco`) y ponga el resultado en los ficheros `work/doremi/clarinete.wav` y `work/doremi/campana.work`.
